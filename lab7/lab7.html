@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Inter');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .body {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/b3753538249841.575a61a5071b5.jpg);
+            background-repeat: repeat;
+            background-position: center;
+            height: 100vh;
+            background-size: cover;
+            font-family: 'Inter';
+        }
+
+        .content {
+            width: 45%;
+            height: 100%;
+            background: rgba(39, 45, 83, 0.6);
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .just-text {
+            font-size: 35px;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        input[type=text] {
+            height: 40px;
+            width: 80%;
+            border: rgba(102, 102, 127, 0.8);
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input[type=password] {
+            height: 40px;
+            width: 80%;
+            border: rgba(102, 102, 127, 0.8);
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input[type=file] {
+            background: white;
+            width: 80%;
+            border-radius: 5px;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type=date] {
+            height: 40px;
+            width: 80%;
+            border: rgba(102, 102, 127, 0.8);
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input[type=time] {
+            height: 40px;
+            width: 80%;
+            border: rgba(102, 102, 127, 0.8);
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input[type=radio] {
+            width: 80%;
+            background: white;
+            border: rgba(102, 102, 127, 0.8);
+            border-radius: 5px;
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .input-radio {
+            background: white;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            width: 80%;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type='radio'] {
+            width: 40px;
+        }
+
+        input[type='color'] {
+            width: 25%;
+            height: 30px;
+            border: none;
+        }
+
+        .favcolor {
+            background: white;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            width: 80%;
+            padding: 5px 10px 10px 10px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        select {
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 83%;
+            padding: 10px 10px 10px 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            height: 40px;
+            width: 50%;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            color: white;
+            background: rgba(71, 82, 156, 0.9);
+        }
+
+        textarea {
+            height: 30px;
+            width: 80%;
+            margin-top: 15px;
+            padding: 0 10px 0 10px;
+            border: rgba(102, 102, 127, 0.8);
+            border-radius: 5px;
+            font-size: 15px;
+            padding-top: 15px;
+            font-family: 'Inter';
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="content">
+        <form onsubmit="onSubmit(event)" action="#">
+            <div class="just-text">
+                Registration
+            </div>
+            <div class="name">
+                <input id="username" type="text" name="username" placeholder="Full name">
+            </div>
+            <div>
+                <input id="email" type="text" name="email" placeholder="Email">
+            </div>
+            <div>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="cssfile">
+                <input id="file" type="file" name="image">
+            </div>
+            <div>
+                <input id="date" type="date" name="birthdate">
+            </div>
+            <div>
+                <input id="time" type="time" name="birthtime">
+            </div>
+            <div class="input-radio" id="gender">
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="favcolor">
+                <p>Favorite Color:</p>
+                <input id="color" type="color">
+            </div>
+            <div>
+                <select name="country" id="country">
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Russia">Russia</option>
+                    <option value="USA">USA</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="car" placeholder="Favorite car" disabled></textarea>
+            </div>
+            <div>
+                <button id="submit" type="submit" onclick="checkOut()">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        $('#submit').click(function () {
+                let email = $('#email').val();
+                let fullname = $('#username').val();
+                let password = $('#password').val();
+                let birthdate = $('#date').val();
+
+                if (email == '' || password == '' || fullname == "") {
+                    alert('Please check the missing field!');
+                }
+                else {
+                    alert('Welcome ' + fullname + '. ')
+                }
+            })
+        function checkOut() {
+            console.log(localStorage.getItem('username'))
+            console.log(localStorage.getItem('password'))
+            console.log(localStorage.getItem('email'))
+            console.log(localStorage.getItem('file'))
+            console.log(localStorage.getItem('date'))
+            console.log(localStorage.getItem('time'))
+            console.log(localStorage.getItem('male'))
+            console.log(localStorage.getItem('female'))
+            console.log(localStorage.getItem('color'))
+            console.log(localStorage.getItem('color'))
+        }
+        function onSubmit(event) {
+
+            let name = document.getElementById('username').value
+            let password = document.getElementById('password').value
+            let email = document.getElementById('email').value
+            let file = document.getElementById('file').value
+            let date = document.getElementById('date').value
+            let time = document.getElementById('time').value
+            let male = document.getElementById('male').value
+            let female = document.getElementById('female').value
+            let color = document.getElementById('color').value
+            let country = document.getElementById('country').value
+
+            console.log(name)
+            console.log(password)
+            console.log(email)
+            console.log(file)
+            console.log(date)
+            console.log(time)
+            console.log(male)
+            console.log(female)
+            console.log(color)
+            console.log(country)
+
+            let data = event.target;
+
+            let formdata = new FormData(data)
+
+
+            let form_data_obj = Object.fromEntries(formdata)
+
+            console.log(form_data_obj);
+
+            localStorage.setItem('username', form_data_obj.name)
+            localStorage.setItem('password', form_data_obj.password)
+            localStorage.setItem('email', form_data_obj.email)
+            localStorage.setItem('file', form_data_obj.file)
+            localStorage.setItem('date', form_data_obj.date)
+            localStorage.setItem('time', form_data_obj.time)
+            localStorage.setItem('male', form_data_obj.male)
+            localStorage.setItem('female', form_data_obj.female)
+            localStorage.setItem('color', form_data_obj.color)
+            localStorage.setItem('country', form_data_obj.country)
+
+            event.preventDefault();
+
+        }
+    </script>
+</body>
+
+</html>
