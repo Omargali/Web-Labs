@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Inter');
+
+        .bg-img {
+            background: url(https://images.pexels.com/photos/589840/pexels-photo-589840.jpeg?cs=srgb&dl=pexels-valiphotos-589840.jpg&fm=jpg) center no-repeat;
+            height: 100vh;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Inter';
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 31px;
+            width: 100%;
+            height: 58px;
+            background: #212121;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .rectangle {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 31px;
+            background: #000;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        a:hover {
+            opacity: 0.9;
+        }
+
+        .AboutUsText {
+            margin-top: 28px;
+            margin-left: 51px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            color: #fff;
+        }
+
+        .text {
+            margin-top: 83px;
+            margin-bottom: 9px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            color: #fff;
+        }
+
+        table {
+            width: 718px;
+            border-collapse: collapse;
+
+        }
+
+        th {
+            background: #727272;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            height: 45px;
+        }
+        .table{
+           margin: auto;
+        }
+
+        .table .temp {
+            border: 1px solid black;
+            border-top: none;
+            border-left: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            width: 87px;
+        }
+
+        td {
+            background: #D9D9D9;
+            color: #000;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            height: 35px;
+            border: 1px solid black;
+            width: 87px;
+        }
+    </style>
+</head>
+
+<body class="bg-img">
+    <div class="AboutUsText">About Us</div>
+    <div class="text">My schedule</div>
+    <div class="footer">
+        <a href="webLab3.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="">Contacts</a>
+    </div>
+    <div class="rectangle">
+        <p>2022 all rights “
+        <div style="color: red;">not</div>” reserved</p>
+    </div>
+    
+    <table class="table">
+        <tr>
+            <th class="temp">day/time</th>
+            <th>mon</th>
+            <th>tue</th>
+            <th>wed</th>
+            <th>thu</th>
+            <th>fri</th>
+        </tr>
+        <tr>
+            <td>9:00</td>
+            <td rowspan="3"></td>
+            <td rowspan="2"></td>
+            <td rowspan="3"></td>
+            <td></td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td>10:00</td>
+            <td rowspan="2">Lessons</td>
+        </tr>
+        <tr>
+            <td>11:00</td>
+            <td>Lessons</td>
+        </tr>
+        <tr>
+            <td>12:00</td>
+            <td>Lunch</td>
+            <td>Lunch</td>
+            <td>Lunch</td>
+            <td>Lunch</td>
+            <td>Lunch</td>
+        </tr>
+        <tr>
+            <td>13:00</td>
+            <td rowspan="2">Lessons</td>
+            <td rowspan="4">Lessons</td>
+            <td rowspan="2"></td>
+            <td rowspan="4">Lessons</td>
+            <td rowspan="6"></td>
+        </tr>
+        <tr>
+            <td>14:00</td>
+
+        </tr>
+        <tr>
+            <td>15:00</td>
+            <td rowspan="4"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16:00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17:00</td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td>18:00</td>
+        </tr>
+    </table>
+</body>
+</html>
