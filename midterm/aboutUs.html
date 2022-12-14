@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>About Us</title>
+    <style>
+        body {
+            position: relative;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .content {
+            padding-top: 50px;
+            margin-left: 150px;
+        }
+
+        .logo {
+            padding-bottom: 50px;
+        }
+
+        .text-h1 {
+            font-family: 'CharterC-Bold';
+            font-size: 50px;
+            line-height: 56px;
+            color: #FFFFFF;
+            margin: 50px 0;
+            margin-bottom: 70px;
+        }
+
+        .text-p {
+            opacity: 0.8;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            margin-left: 60px;
+            position: relative;
+            color: #FBD784;
+        }
+
+        .text-p::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 2px;
+            background-color: #FBD784;
+            left: -60px;
+            bottom: 10px;
+        }
+
+        .column1 {
+            max-width: 490px;
+            margin-left: 100px;
+        }
+
+        .rows .row {
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .column2 {
+            margin-top: 0;
+            width: 780px;
+            height: 800px;
+        }
+
+        .column2 img {
+            margin-top: 0;
+            width: 780px;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        .description {
+            font-family: 'Gilroy-Bold';
+            font-size: 15px;
+            line-height: 26px;
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .rows .row:first-child {
+            margin-bottom: 50px;
+            flex-direction: row-reverse;
+        }
+
+        .rows .row:first-child .column1 {
+            margin-left: 0;
+            margin-right: 100px;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* mobile  */
+        @media (max-width: 767px) {
+            .row {
+                --bs-gutter-x: 0;
+            }
+
+            .rows .row {
+                text-align: center;
+            }
+
+            .rows .row .column1 {
+                margin: 0 !important;
+            }
+
+            .column2 {
+                width: 780px;
+                height: 400px;
+            }
+
+            .column2 img {
+                height: 400px;
+                object-fit: cover;
+            }
+
+        }
+
+        /* tablet  */
+        @media screen and (min-width: 767px) and (max-width: 1024px) {
+            .rows .row .column1 {
+                margin: 0 !important;
+            }
+
+            .column1 {
+                text-align: center;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
+            .row {
+                --bs-gutter-x: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="content">
+        <a href="zhai.html"><img src="https://sandyq.kz/images/logo-sandyk.svg" alt="logo" class="logo"></a>
+    </div>
+    <section class="rows">
+        <div class="row">
+            <div class="column1">
+                <p class="text-p">MISSION</p>
+                <h1 class="text-h1">Show age-old<br>traditions</h1>
+                <p class="description">
+                    Sandyk is the original, Kazakh name of a unique household item, one of the oldest types of
+                    furniture, in which precious items for each family were stored and transported. The purpose of our
+                    restaurant with the same name "Sandyk" is to show the centuries-old traditions both in cooking,
+                    serving dishes, hospitality in general, and to present unique objects of historical and cultural
+                    significance, household items of the South Kazakhstan region.
+                </p>
+            </div>
+            <div class="column2">
+                <img src="https://sandyq.kz/images/about-rest-img-1.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column1">
+                <p class="text-p">INTERIOR</p>
+                <h1 class="text-h1">Unique <br> interior</h1>
+                <p class="description">
+                    The southern region of Kazakhstan has been famous since ancient times for wood carving, pottery and
+                    carpet weaving, zergers and weaving, mat weaving and felting, sewing and embroidery. We draw the
+                    attention of our visitors to the types of crafts that were once widely known outside the country -
+                    glassblowing and leatherworking, individual items and details of which, today, adorn the halls of
+                    the restaurant.
+                </p>
+            </div>
+            <div class="column2">
+                <img src="https://sandyq.kz/images/about-rest-img-2.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
